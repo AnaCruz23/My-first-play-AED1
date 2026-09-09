@@ -6,12 +6,12 @@ int main(){
     int altura=0;
     for(int i=0;i<5;i++){
         printf ("Índice: %d|Endereço: %p|Conteúdo: %d\n",i,(void*)(v+i), *(v+i));
-        pontos+=*(v+i);
+        *ptr_pontos+=*(v+i);
         altura+=*(v+i);
     }
     // O deslocamento utilizado respeita o ponteiro, pois ao somar +1, o computador entende que o valor 
     //inteiro ocupa 4 bytes, então o endereço do próximo elemento do vetor será o endereço atual + 4 bytes.
-    printf ("\n Pontuação total: %d\n", pontos);
+    printf ("\n Pontuação total: %d\n", *ptr_pontos);
     printf ("Altura total: %d\n", altura);
     return 0;
 
